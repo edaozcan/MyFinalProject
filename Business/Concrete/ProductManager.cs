@@ -20,6 +20,9 @@ namespace Business.Concrete
             _ProductDal = productDal;
         }
 
+   
+
+
         public IResult Add(Product product)
         {
             if(product.ProductName.Length<2)
@@ -36,7 +39,7 @@ namespace Business.Concrete
         {
             //iş kodları
 
-            if(DateTime.Now.Hour==22)
+            if(DateTime.Now.Hour==11)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
