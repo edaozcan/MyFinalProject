@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Microsoft.AspNetCore.Http;
 
 namespace Core.DependencyResolvers
 {
@@ -11,9 +11,7 @@ namespace Core.DependencyResolvers
     {
         public void Load(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddMemoryCache();
             serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-           
         }
     }
 }
